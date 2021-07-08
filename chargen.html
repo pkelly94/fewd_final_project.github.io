@@ -1,0 +1,437 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/header.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="UTF-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Character Generator</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<!-- ?ver=<?php echo rand(111,999)?> -->
+<link rel="shortcut icon" type="image/x-icon" href="CPG - favicon.ico"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link href="_css/style.css" rel="stylesheet" type="text/css">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+</head>
+	
+<body>
+	<div class="nav-container">
+		<div class="nav-left">
+			<a href="chargen.html">PLAY</a>
+			<a href="instructions.html">CHEAT SHEET</a>
+		</div>
+		<a href="home.html">CLASS PRESIDENT RPG</a>
+		<div class="nav-right">
+			<a href="yearbook.html">YEARBOOK</a>
+			<a href="about.html">ABOUT</a>
+		</div>
+		<img src="_img/CPG - Menu.svg" id="menu-icon">
+	</div>
+
+	<!-- InstanceBeginEditable name="PageContent" -->	
+	<div class="settings-box modal">
+		<div class="settings-box-top">
+			<h2>GAME SETTINGS</h2>
+		</div>
+		<div class="settings-box-main">
+			<div class="settings">
+				<h2>PLAYERS</h2>
+				<input type="number" id="myNumber" placeholder="..." min="2" max="8" maxlength="1" class="form">
+				<!-- <button class="br_wall" id="br_wall"><h1 class="enter">BATHROOM WALL</h1></button> -->
+			</div>
+			<div class="settings">
+				<h2>RATING</H2>
+					<div class="button-cover">
+						<div class="button b2" id="rating-button">
+						<input type="checkbox" class="checkbox" id="rating">
+						<div class="knobs">
+							<span>R</span>
+						</div>
+						<div class="layer"></div>
+						</div>
+					</div>
+				</div>
+			<button id="start">START</button>
+			<div class="wrapper">
+				<p id="error" style="visibility: hidden"></p>
+			</div>
+		</div>
+	</div>
+	<div class="player-box-wrapper">
+		<div id="p1" class="player-box">
+			<div class="player-box-top">
+				<div class="player-box-top-left">
+					<span class="icon">☯</span>
+					<input class="player-name player-name-desktop" placeholder="PLAYER 1"></input>
+					<p class="player-name player-name-mobile">PLAYER 1</p>
+				</div>
+				<p class="stat stat-title">STATS</p>
+			</div>
+			<div class="player-box-main">
+				<div class="player-detail">
+					<div class="stripe-box">
+						<div class="player-bio">
+							<p class="activity">after school activity</p>
+							<p class="zodiac">zodiac sign</p>
+							<p class="rep">reputation</p>
+						</div>
+						<div class="striped-lines"></div>
+					</div>
+					<textarea placeholder="Notepad"></textarea>
+				</div>
+				<div class="player-stats">
+					<p class="stat">ACA</p>
+					<p class="stat">ALC</p>
+					<p class="stat">ATH</p>
+					<p class="stat">CRE</p>
+					<p class="stat">CHL</p>
+					<p class="stat">CHA</p>
+					<p class="stat">EMP</p>
+					<p class="stat">NGC</p>
+					<p class="stat">PP</p>
+				</div>
+				<div class="player-scores">
+					<p class="score aca">0</p>
+					<p class="score alc">0</p>
+					<p class="score ath">0</p>
+					<p class="score cre">0</p>
+					<p class="score chl">0</p>
+					<p class="score cha">0</p>
+					<p class="score emp">0</p>
+					<p class="score ngc">0</p>
+					<p class="score pp">0</p>
+				</div>
+			</div>
+		</div>
+		<div id="p2" class="player-box">
+			<div class="player-box-top">
+				<div class="player-box-top-left">
+					<span class="icon">✪</span>
+					<input class="player-name player-name-desktop" placeholder="PLAYER 2"></input>
+					<p class="player-name player-name-mobile">PLAYER 2</p>
+				</div>
+				<p class="stat stat-title">STATS</p>
+			</div>
+			<div class="player-box-main">
+				<div class="player-detail">
+					<div class="stripe-box">
+						<div class="player-bio">
+							<p class="activity">after school activity</p>
+							<p class="zodiac">zodiac sign</p>
+							<p class="rep">reputation</p>
+						</div>
+						<div class="striped-lines"></div>
+					</div>
+					<textarea placeholder="Notepad"></textarea>
+				</div>
+				<div class="player-stats">
+					<p class="stat">ACA</p>
+					<p class="stat">ALC</p>
+					<p class="stat">ATH</p>
+					<p class="stat">CRE</p>
+					<p class="stat">CHL</p>
+					<p class="stat">CHA</p>
+					<p class="stat">EMP</p>
+					<p class="stat">NGC</p>
+					<p class="stat">PP</p>
+				</div>
+				<div class="player-scores">
+					<p class="score aca">0</p>
+					<p class="score alc">0</p>
+					<p class="score ath">0</p>
+					<p class="score cre">0</p>
+					<p class="score chl">0</p>
+					<p class="score cha">0</p>
+					<p class="score emp">0</p>
+					<p class="score ngc">0</p>
+					<p class="score pp">0</p>
+				</div>
+			</div>
+		</div>
+		<div id="p3" class="player-box">
+			<div class="player-box-top">
+				<div class="player-box-top-left">
+					<span class="icon">☢</span>
+					<input class="player-name player-name-desktop" placeholder="PLAYER 3"></input>
+					<p class="player-name player-name-mobile">PLAYER 3</p>
+				</div>
+				<p class="stat stat-title">STATS</p>
+			</div>
+			<div class="player-box-main">
+				<div class="player-detail">
+					<div class="stripe-box">
+						<div class="player-bio">
+							<p class="activity">after school activity</p>
+							<p class="zodiac">zodiac sign</p>
+							<p class="rep">reputation</p>
+						</div>
+						<div class="striped-lines"></div>
+					</div>
+					<textarea placeholder="Notepad"></textarea>
+				</div>
+				<div class="player-stats">
+					<p class="stat">ACA</p>
+					<p class="stat">ALC</p>
+					<p class="stat">ATH</p>
+					<p class="stat">CRE</p>
+					<p class="stat">CHL</p>
+					<p class="stat">CHA</p>
+					<p class="stat">EMP</p>
+					<p class="stat">NGC</p>
+					<p class="stat">PP</p>
+				</div>
+				<div class="player-scores">
+					<p class="score aca">0</p>
+					<p class="score alc">0</p>
+					<p class="score ath">0</p>
+					<p class="score cre">0</p>
+					<p class="score chl">0</p>
+					<p class="score cha">0</p>
+					<p class="score emp">0</p>
+					<p class="score ngc">0</p>
+					<p class="score pp">0</p>
+				</div>
+			</div>
+		</div>
+		<div id="p4" class="player-box">
+			<div class="player-box-top">
+				<div class="player-box-top-left">
+					<span class="icon">☮</span>
+					<input class="player-name player-name-desktop" placeholder="PLAYER 4"></input>
+					<p class="player-name player-name-mobile">PLAYER 4</p>
+				</div>
+				<p class="stat stat-title">STATS</p>
+			</div>
+			<div class="player-box-main">
+				<div class="player-detail">
+					<div class="stripe-box">
+						<div class="player-bio">
+							<p class="activity">after school activity</p>
+							<p class="zodiac">zodiac sign</p>
+							<p class="rep">reputation</p>
+						</div>
+						<div class="striped-lines"></div>
+					</div>
+					<textarea placeholder="Notepad"></textarea>
+				</div>
+				<div class="player-stats">
+					<p class="stat">ACA</p>
+					<p class="stat">ALC</p>
+					<p class="stat">ATH</p>
+					<p class="stat">CRE</p>
+					<p class="stat">CHL</p>
+					<p class="stat">CHA</p>
+					<p class="stat">EMP</p>
+					<p class="stat">NGC</p>
+					<p class="stat">PP</p>
+				</div>
+				<div class="player-scores">
+					<p class="score aca">0</p>
+					<p class="score alc">0</p>
+					<p class="score ath">0</p>
+					<p class="score cre">0</p>
+					<p class="score chl">0</p>
+					<p class="score cha">0</p>
+					<p class="score emp">0</p>
+					<p class="score ngc">0</p>
+					<p class="score pp">0</p>
+				</div>
+			</div>
+		</div>
+		<div id="p5" class="player-box">
+			<div class="player-box-top">
+				<div class="player-box-top-left">
+					<span class="icon">❁</span>
+					<input class="player-name player-name-desktop" placeholder="PLAYER 5"></input>
+					<p class="player-name player-name-mobile">PLAYER 5</p>
+				</div>
+				<p class="stat stat-title">STATS</p>
+			</div>
+			<div class="player-box-main">
+				<div class="player-detail">
+					<div class="stripe-box">
+						<div class="player-bio">
+							<p class="activity">after school activity</p>
+							<p class="zodiac">zodiac sign</p>
+							<p class="rep">reputation</p>
+						</div>
+						<div class="striped-lines"></div>
+					</div>
+					<textarea placeholder="Notepad"></textarea>
+				</div>
+				<div class="player-stats">
+					<p class="stat">ACA</p>
+					<p class="stat">ALC</p>
+					<p class="stat">ATH</p>
+					<p class="stat">CRE</p>
+					<p class="stat">CHL</p>
+					<p class="stat">CHA</p>
+					<p class="stat">EMP</p>
+					<p class="stat">NGC</p>
+					<p class="stat">PP</p>
+				</div>
+				<div class="player-scores">
+					<p class="score aca">0</p>
+					<p class="score alc">0</p>
+					<p class="score ath">0</p>
+					<p class="score cre">0</p>
+					<p class="score chl">0</p>
+					<p class="score cha">0</p>
+					<p class="score emp">0</p>
+					<p class="score ngc">0</p>
+					<p class="score pp">0</p>
+				</div>
+			</div>
+		</div>
+		<div id="p6" class="player-box">
+			<div class="player-box-top">
+				<div class="player-box-top-left">
+					<span class="icon">☭</span>
+					<input class="player-name player-name-desktop" placeholder="PLAYER 6"></input>
+					<p class="player-name player-name-mobile">PLAYER 6</p>
+				</div>
+				<p class="stat stat-title">STATS</p>
+			</div>
+			<div class="player-box-main">
+				<div class="player-detail">
+					<div class="stripe-box">
+						<div class="player-bio">
+							<p class="activity">after school activity</p>
+							<p class="zodiac">zodiac sign</p>
+							<p class="rep">reputation</p>
+						</div>
+						<div class="striped-lines"></div>
+					</div>
+					<textarea placeholder="Notepad"></textarea>
+				</div>
+				<div class="player-stats">
+					<p class="stat">ACA</p>
+					<p class="stat">ALC</p>
+					<p class="stat">ATH</p>
+					<p class="stat">CRE</p>
+					<p class="stat">CHL</p>
+					<p class="stat">CHA</p>
+					<p class="stat">EMP</p>
+					<p class="stat">NGC</p>
+					<p class="stat">PP</p>
+				</div>
+				<div class="player-scores">
+					<p class="score aca">0</p>
+					<p class="score alc">0</p>
+					<p class="score ath">0</p>
+					<p class="score cre">0</p>
+					<p class="score chl">0</p>
+					<p class="score cha">0</p>
+					<p class="score emp">0</p>
+					<p class="score ngc">0</p>
+					<p class="score pp">0</p>
+				</div>
+			</div>
+		</div>
+		<div id="p7" class="player-box">
+			<div class="player-box-top">
+				<div class="player-box-top-left">
+					<span class="icon">❂</span>
+					<input class="player-name player-name-desktop" placeholder="PLAYER 7"></input>
+					<p class="player-name player-name-mobile">PLAYER 7</p>
+				</div>
+				<p class="stat stat-title">STATS</p>
+			</div>
+			<div class="player-box-main">
+				<div class="player-detail">
+					<div class="stripe-box">
+						<div class="player-bio">
+							<p class="activity">after school activity</p>
+							<p class="zodiac">zodiac sign</p>
+							<p class="rep">reputation</p>
+						</div>
+						<div class="striped-lines"></div>
+					</div>
+					<textarea placeholder="Notepad"></textarea>
+				</div>
+				<div class="player-stats">
+					<p class="stat">ACA</p>
+					<p class="stat">ALC</p>
+					<p class="stat">ATH</p>
+					<p class="stat">CRE</p>
+					<p class="stat">CHL</p>
+					<p class="stat">CHA</p>
+					<p class="stat">EMP</p>
+					<p class="stat">NGC</p>
+					<p class="stat">PP</p>
+				</div>
+				<div class="player-scores">
+					<p class="score aca">0</p>
+					<p class="score alc">0</p>
+					<p class="score ath">0</p>
+					<p class="score cre">0</p>
+					<p class="score chl">0</p>
+					<p class="score cha">0</p>
+					<p class="score emp">0</p>
+					<p class="score ngc">0</p>
+					<p class="score pp">0</p>
+				</div>
+			</div>
+		</div>
+		<div id="p8" class="player-box">
+			<div class="player-box-top">
+				<div class="player-box-top-left">
+					<span class="icon">☾</span>
+					<input class="player-name player-name-desktop" placeholder="PLAYER 8"></input>
+					<p class="player-name player-name-mobile">PLAYER 8</p>
+				</div>
+				<p class="stat stat-title">STATS</p>
+			</div>
+			<div class="player-box-main">
+				<div class="player-detail">
+					<div class="stripe-box">
+						<div class="player-bio">
+							<p class="activity">after school activity</p>
+							<p class="zodiac">zodiac sign</p>
+							<p class="rep">reputation</p>
+						</div>
+						<div class="striped-lines"></div>
+					</div>
+					<textarea placeholder="Notepad"></textarea>
+				</div>
+				<div class="player-stats">
+					<p class="stat">ACA</p>
+					<p class="stat">ALC</p>
+					<p class="stat">ATH</p>
+					<p class="stat">CRE</p>
+					<p class="stat">CHL</p>
+					<p class="stat">CHA</p>
+					<p class="stat">EMP</p>
+					<p class="stat">NGC</p>
+					<p class="stat">PP</p>
+				</div>
+				<div class="player-scores">
+					<p class="score aca">0</p>
+					<p class="score alc">0</p>
+					<p class="score ath">0</p>
+					<p class="score cre">0</p>
+					<p class="score chl">0</p>
+					<p class="score cha">0</p>
+					<p class="score emp">0</p>
+					<p class="score ngc">0</p>
+					<p class="score pp">0</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- scripts  -->
+	<script src="_js/char_gen.js"></script>
+	<script src="_js/br_gen.js"></script>
+
+	<!-- InstanceEndEditable -->
+	<footer>
+		<div class="settings-wrapper">
+			<div class="settings-button"></div>
+			<p>GAME SETTINGS</p>
+		</div>
+		<div class="signature">© GAME AND WEBSITE BY CAROLINE BREWER + PETER KELLY</div>
+	</footer>
+</body>
+
+<!-- InstanceEnd --></html>
