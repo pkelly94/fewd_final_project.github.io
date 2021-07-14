@@ -1,109 +1,99 @@
 //Define variables
 
-let br = document.querySelector('#br_wall');
+let button = document.querySelectorAll('.br-reveal');
+let bwRumor = document.querySelectorAll('.br-rumor');
+let player = document.querySelectorAll('.player-name-desktop');
 
-//Define arrays
+const playerOne = button[0];
+const playerTwo = button[1];
+const playerThree = button[2];
+const playerFour = button[3];
+const playerFive = button[4];
+const playerSix = button[5];
+const playerSeven = button[6];
+const playerEight = button[7];
 
-var rumor = [
-	'sells fake drugs to freshman',
-	'is a reclaimed virgin',
-	'has a 30 yr old s/o',
-	'only hooks up w/ freshman',
-	'hooked up with bffs s/o',
-	'broke up w/ person to their left via text',
-	'ghosted person to their right',
-	'bought their instagram followers',
-	'still believes in santa',
-	'slept with a teacher',
-	's/o from camp is fake',
-	'has a shrine in their closet for the person to their left',
-	'sent nudes to the principal',
-	'has never been kissed',
-	'made out with a hot dog',
-	'is cheating on s/o with person to their right',
-	'parents wont let them watch pg-13 rated movies',
-	'is always wearing a g string',
-	'has vodka in their water bottle',
-	'was on the show teen mom',
-	'cried when they didnt get into hogwarts',
-	'has a spray tan',
-	'masturbates in the 3rd floor bathroom',
-	'really wants to talk about the summer reading assignment',
-	'bought a love potion online',
-	'has a secret youtube channel they dont want the school knowing about',
-	'has been arrested',
-	'is a serial monogamist',
-	'has an onlyfans account',
-	'is a(n) [insert culturally relevant event] truther'
-]
+//Create function to hide the button and reveal the rumor
 
-var rumorPG = [
+function reveal(i) {
 
-	'broke up w/ person to their left via text',
-	'ghosted person to their right',
-	'bought their instagram followers',
-	'still believes in santa',
-	's/o from camp is fake',
-	'has a shrine in their closet for the person to their left',
-	'has never been kissed',
-	'was on the show teen mom',
-	'cried when they didnt get into hogwarts',
-	'has a spray tan',
-	'really wants to talk about the summer reading assignment',
-	'bought a love potion online',
-	'has a secret youtube channel they dont want the school knowing about',
-	'has been arrested',
-	'is a serial monogamist',
-	'is a(n) [insert culturally relevant event] truther',
-    'is failing at going viral on tik tok'
-]
+	var playerCount = document.getElementById("myNumber").value;
+	console.log(playerCount);
+	var string = bwRumor[i].innerText;
+	var x = (i - (playerCount - 1)) * (-1);
+	var playerName = player[x].value;
+	console.log(string);
 
-//Run function
+	//If playerName is blank, default to player number
 
-br.addEventListener('click', () =>{
+	if (playerName.length == 0) {
+		playerName = 'Player '+(x+1);
+	}
 
-    // define player count
-        
-        var playercount = document.getElementById("myNumber").value;	
-        
-        let error = document.querySelector('#error')
-        
-        error.style.visibility = "hidden";
-        
-        if (playercount < 2) {
-            
-            let element = document.querySelector('#error')
-            element.style.visibility = "visible"
-            element.innerText = "that doesn't look like much of a democracy, please enter a value between 2 and 9"
-            
-        } else if (playercount > 9) {
-            
-            let element = document.querySelector('#error')
-            element.style.visibility = "visible"
-            element.innerText = "having "+playercount+" friends is impressive but it is time to pick your favorites, please enter a value between 2 and 9"
-            
-        } else {
-            
-            // Define arrays
-        
-            let rumor = shuffle(rumor);
-    
-            // clear all elements	
-        
-            Hide(allDivArray)
-            Show(allDivArray, playercount)
-        
-            for(var i=1; i<=27; i++){
-                let element = document.querySelector('#'+allelements[i-1]);
-                element.innerText = '';
-            }
-        
-            // Get Rumors
-        
-            for(i=1; i<=playercount; i++){
-                let element = document.querySelector('#'+elementastroarray[i-1]);
-                element.innerText = RumorArray[i-1];
-            }
-            
-        }
-    });
+	// Check for responsive values and reveal
+
+	if (string == "responsive-1") {
+		bwRumor[i].innerText = "broke up with "+playerName+" via text";
+		button[i].style.display = "none";
+		bwRumor[i].style.display = "block";
+	} else if (string == "responsive-2") {
+		bwRumor[i].innerText = "cheated on their sweetheart with "+playerName;
+		button[i].style.display = "none";
+		bwRumor[i].style.display = "block";
+	} else if (string == "responsive-3") {
+		bwRumor[i].innerText = "has a shrine of "+playerName+" in their closet";
+		button[i].style.display = "none";
+		bwRumor[i].style.display = "block";
+	} else if (string == "responsive-4") {
+		bwRumor[i].innerText = "ghosted "+playerName+" after one date";
+		button[i].style.display = "none";
+		bwRumor[i].style.display = "block";
+	} else if (string == "responsive-5") {
+		bwRumor[i].innerText = "really hates "+playerName;
+		button[i].style.display = "none";
+		bwRumor[i].style.display = "block";
+	} else if (string == "responsive-6") {
+		bwRumor[i].innerText = "is secretly half-siblings with "+playerName;
+		button[i].style.display = "none";
+		bwRumor[i].style.display = "block";
+	} else if (string == "responsive-7") {
+		bwRumor[i].innerText = "slept with "+playerName+"'s parent";
+		button[i].style.display = "none";
+		bwRumor[i].style.display = "block";
+	} else {
+		button[i].style.display = "none";
+		bwRumor[i].style.display = "block";
+	}
+}
+
+playerOne.addEventListener('click', () => {
+	reveal(0);
+});
+
+playerTwo.addEventListener('click', () => {
+	reveal(1);
+});
+
+playerThree.addEventListener('click', () => {
+	reveal(2)
+});
+
+playerFour.addEventListener('click', () => {
+	reveal(3)
+});
+
+playerFive.addEventListener('click', () => {
+	reveal(4)
+});
+
+playerSix.addEventListener('click', () => {
+	reveal(5)
+});
+
+playerSeven.addEventListener('click', () => {
+	reveal(6)
+});
+
+playerEight.addEventListener('click', () => {
+	reveal(7)
+});
