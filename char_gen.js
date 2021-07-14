@@ -616,7 +616,7 @@ classic.addEventListener('click', () => {
 })
 
 fire.addEventListener('click', () => {
-	canvas.style.backgroundImage = "url('_img/_themes/CPG - BACKGROUND - FIRE SIGN.jpg')";
+	canvas.style.backgroundImage = "url('CPG - BACKGROUND - FIRE SIGN.jpg')";
 	canvas.style.backgroundSize = "100vw";
 	document.documentElement.style.setProperty('--border', 'black')
 	document.documentElement.style.setProperty('--font-color', 'black')
